@@ -10,6 +10,7 @@ COPY ratioghost/ /ratioghost
 
 # Copy the start script.
 COPY startapp.sh /startapp.sh
+RUN chmod +x /startapp.sh
 
 EXPOSE 3773
 
