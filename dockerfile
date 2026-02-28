@@ -7,6 +7,8 @@ apt-get -y upgrade && \
 apt-get -y install tcl tk tcl-tls libsqlite3-tcl tcllib
 
 COPY ratioghost/ /ratioghost
+RUN chmod 777 /ratioghost
+RUN chmod +x /ratioghost/start-ratioghost.sh
 
 # Copy the start script.
 COPY startapp.sh /startapp.sh
